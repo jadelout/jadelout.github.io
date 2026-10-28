@@ -10,7 +10,7 @@
     });
   };
 
-  var state = { filter: 'Tout', formula: 'La semaine', guests: 2, sent: false, sending: false, sendError: false, contenu: null };
+  var state = { filter: 'Tout', formula: 'La semaine', guests: 4, sent: false, sending: false, sendError: false, contenu: null };
 
   // ---------------------------------------------------------------- animations
   var hLemon = $('hLemon'), hTomato = $('hTomato'), hFig = $('hFig');
@@ -154,7 +154,7 @@
       sentEl.setAttribute('style', 'background:#ffd60a;color:#141412;border-radius:28px;padding:48px;display:flex;flex-direction:column;gap:16px;justify-content:center');
       sentEl.innerHTML =
         '<span style="font-weight:900;font-size:48px;letter-spacing:-0.03em;line-height:1">Merci !</span>' +
-        '<p style="margin:0;font-size:18px;line-height:1.5">Demande reçue pour la formule <strong>' + esc(state.formula) + '</strong>, ' + state.guests + ' personne(s). Je vous réponds sous 48 h pour caler notre appel.</p>' +
+        '<p style="margin:0;font-size:18px;line-height:1.5">Demande reçue pour la formule <strong>' + esc(state.formula) + '</strong>, ' + state.guests + ' personnes. Je vous réponds sous 48 h pour caler notre appel.</p>' +
         '<button style="align-self:flex-start;padding:12px 20px;border-radius:999px;border:1.5px solid #141412;background:transparent;font-weight:700;cursor:pointer">Nouvelle demande</button>';
       sentEl.querySelector('button').addEventListener('click', function () {
         state.sent = false;
@@ -172,8 +172,8 @@
     var b = e.target.closest('[data-formula]');
     if (b) { state.formula = b.getAttribute('data-formula'); renderForm(); }
   });
-  $('dec').addEventListener('click', function () { state.guests = Math.max(1, state.guests - 1); renderForm(); });
-  $('inc').addEventListener('click', function () { state.guests = Math.min(12, state.guests + 1); renderForm(); });
+  $('dec').addEventListener('click', function () { state.guests = Math.max(4, state.guests - 1); renderForm(); });
+  $('inc').addEventListener('click', function () { state.guests = Math.min(16, state.guests + 1); renderForm(); });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
