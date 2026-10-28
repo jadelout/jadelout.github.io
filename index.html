@@ -172,7 +172,7 @@ html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}
         <h2 style="margin:0;font-weight:900;font-size:clamp(44px,6vw,80px);line-height:0.95;letter-spacing:-0.035em">Prendre<br>rendez-vous</h2>
         <p style="margin:28px 0 0;max-width:420px;font-size:18px;line-height:1.55;color:#d6d4cb">Un premier appel de 20 minutes, sans engagement, pour parler de vos goûts, de votre semaine type et de ce qui vous ferait plaisir.</p>
         <div style="margin-top:40px;display:flex;flex-direction:column;gap:10px;font-size:17px">
-          <a href="mailto:jadeloutaty@hotmail.com" style="color:#ffd60a;font-weight:700">jadeloutaty@hotmail.com</a>
+          <a href="mailto:chef.jadelout@gmail.com" style="color:#ffd60a;font-weight:700">chef.jadelout@gmail.com</a>
           <span style="color:#d6d4cb">Paris &amp; proche banlieue Ouest</span>
         </div>
       </div>
@@ -185,14 +185,17 @@ html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}
             <div data-ref="formulas" style="display:flex;gap:8px;flex-wrap:wrap"></div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px">
-            <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Prénom &amp; nom
-              <input name="nom" required="" placeholder="Camille Martin" style="padding:14px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
+            <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Prénom
+              <input name="prenom" required="" autocomplete="given-name" placeholder="Camille" style="padding:14px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
             </label>
-            <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Email
-              <input name="email" required="" type="email" placeholder="camille@mail.fr" style="padding:14px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
+            <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Nom
+              <input name="nom" required="" autocomplete="family-name" placeholder="Martin" style="padding:14px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
             </label>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px">
+            <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Téléphone
+              <input name="telephone" required="" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+ .\-()]{10,20}" title="Un numéro de téléphone, par exemple 06 12 34 56 78" placeholder="06 12 34 56 78" style="padding:14px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
+            </label>
             <label style="display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:15px">Date souhaitée
               <input name="date" type="date" style="padding:13px 16px;border-radius:14px;border:1.5px solid #141412;font-size:16px;background:#fdfcf8">
             </label>
